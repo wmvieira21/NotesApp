@@ -47,11 +47,13 @@ export function setFocus(section) {
 
 export function loadNotesLocalStorage() {
     const notes = JSON.parse(localStorage.getItem('notes'));
-    console.log(notes);
-    notes.forEach(note => {
-        const section = createSectionNote(note);
-        events.loadToolkitEvents(section);
-    });
+    
+    if (notes) {
+        notes.forEach(note => {
+            const section = createSectionNote(note);
+            events.loadToolkitEvents(section);
+        });
+    }
 }
 
 function setEditMode(isEditMode, section) {
