@@ -52,7 +52,6 @@ main {
         aspect-ratio: 1/1;
         background-color: white;
         border-radius: 10px;
-        box-shadow: 0px 0px 10px 3px #7bdaf3;
         overflow: hidden;
 
         .note-toolkit {
@@ -102,5 +101,9 @@ main {
                 word-break: break-word;
             }
         }
+    }
+
+    .note:focus-within {
+        box-shadow: 0px 0px 10px 3px #7bdaf3;
     }
 }
