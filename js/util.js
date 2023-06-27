@@ -17,7 +17,7 @@ export function createSectionNote(text) {
     </div>
     <div class="note-text__container">
         <div class="note-text__readonly hidden">${(text ? text : '')}</div>
-        <textarea autofocus id="note-text__info">${(text ? text : '')}</textarea>
+        <textarea id="note-text__info">${(text ? text : '')}</textarea>
     </div>
     </div>`
 
@@ -42,7 +42,6 @@ export function saveLocalStorage() {
 export function setFocus(section) {
     const noteTextInfoEL = section.querySelector('#note-text__info');
     noteTextInfoEL.focus();
-    console.dir(noteTextInfoEL);
 }
 
 export function loadNotesLocalStorage() {

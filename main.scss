@@ -5,7 +5,6 @@
 }
 
 body {
-    height: 100vh;
     background-color: lightcyan;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -53,14 +52,16 @@ main {
         background-color: white;
         border-radius: 10px;
         overflow: hidden;
+        display: flex;
+        flex-direction: column;
 
         .note-toolkit {
             display: flex;
             gap: 0.5rem;
             justify-content: flex-end;
             background-color: rgba(68, 201, 68, 0.582);
-            ;
             padding: 0.5rem;
+            flex: 0;
 
             button {
                 background-color: transparent;
@@ -79,7 +80,7 @@ main {
         }
 
         .note-text__container {
-            height: 100%;
+            flex: 1;
 
             #note-text__info {
                 width: 100%;
@@ -89,6 +90,7 @@ main {
                 outline: none;
                 font-family: inherit;
                 font-size: 1.2rem;
+                resize: none;
             }
 
             .hidden {
