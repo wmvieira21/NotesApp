@@ -3,22 +3,22 @@ import * as events from './events.js';
 
 export function createSectionNote(text) {
     const section = document.createElement('section');
-    section.classList.add('note-container');
+    section.classList.add('note-section');
 
     const bodySection = `
-    <div class="note">
-    <div class="note-toolkit">
-        <button id="note-toolkit__edit">
-            <i class="fa-regular fa-pen-to-square"></i>
-        </button>
-        <button id="note-toolkit__delete">
-            <i class="fa-regular fa-trash-can"></i>
-        </button>
-    </div>
-    <div class="note-text__container">
-        <div class="note-text__readonly hidden">${(text ? text : '')}</div>
-        <textarea id="note-text__info">${(text ? text : '')}</textarea>
-    </div>
+    <div class="note-container" tabindex="0">
+        <div class="note-toolkit">
+            <button id="note-toolkit__edit">
+                <i class="fa-regular fa-pen-to-square"></i>
+            </button>
+            <button id="note-toolkit__delete">
+                <i class="fa-regular fa-trash-can"></i>
+            </button>
+        </div>
+        <div class="note-text__container">
+            <div class="note-text__readonly hidden">${(text ? text : '')}</div>
+            <textarea id="note-text__info">${(text ? text : '')}</textarea>
+        </div>
     </div>`
 
     section.innerHTML = bodySection;

@@ -36,46 +36,42 @@ main {
   margin-top: 5rem;
   padding: 1rem;
   display: grid;
-  grid-template-columns: repeat(auto-fill, 20rem);
+  grid-template-columns: repeat(auto-fill, 30rem);
   gap: 2rem;
 }
 
-.note-container {
-  width: 20rem;
-}
-.note-container .note {
-  width: 20rem;
-  aspect-ratio: 1/1;
-  background-color: white;
+.note-section {
   border-radius: 10px;
   overflow: hidden;
-  display: flex;
-  flex-direction: column;
 }
-.note-container .note .note-toolkit {
+.note-section .note-container {
+  width: 30rem;
+  aspect-ratio: 1/1;
+  background-color: white;
+}
+.note-section .note-container .note-toolkit {
   display: flex;
-  gap: 0.5rem;
   justify-content: flex-end;
+  gap: 1rem;
   background-color: rgba(68, 201, 68, 0.582);
-  padding: 0.5rem;
-  flex: 0;
+  padding: 1rem;
 }
-.note-container .note .note-toolkit button {
+.note-section .note-container .note-toolkit button {
   background-color: transparent;
   border: none;
   cursor: pointer;
 }
-.note-container .note .note-toolkit button i {
-  font-size: 1.2rem;
+.note-section .note-container .note-toolkit button i {
+  font-size: 1.5rem;
   color: #fff;
 }
-.note-container .note .note-toolkit button:active {
+.note-section .note-container .note-toolkit button:active {
   transform: scale(0.9);
 }
-.note-container .note .note-text__container {
-  flex: 1;
+.note-section .note-container .note-text__container {
+  height: 100%;
 }
-.note-container .note .note-text__container #note-text__info {
+.note-section .note-container .note-text__container #note-text__info {
   width: 100%;
   height: 100%;
   padding: 1rem;
@@ -85,16 +81,19 @@ main {
   font-size: 1.2rem;
   resize: none;
 }
-.note-container .note .note-text__container .hidden {
-  display: none;
-}
-.note-container .note .note-text__container .note-text__readonly {
+.note-section .note-container .note-text__container .note-text__readonly {
+  height: 100%;
   padding: 1rem;
   color: rgb(94, 94, 94);
   word-break: break-word;
+  overflow-y: auto;
 }
-.note-container .note:focus-within {
-  box-shadow: 0px 0px 10px 3px #7bdaf3;
+.note-section .note-container .note-text__container .hidden {
+  display: none;
+}
+
+.note-section:focus-within {
+  box-shadow: 0px 0px 10px 3px #8de0f7;
 }
 
 /*# sourceMappingURL=main.css.map */

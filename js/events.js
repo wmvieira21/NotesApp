@@ -14,7 +14,7 @@ export function loadToolkitEvents(section) {
     deleteToolkitEvent(section);
     editToolkitEvent(section);
     noteTextEventInput(section);
-    //focusLostInput(section);
+    focusLostInput(section);
 }
 
 function deleteToolkitEvent(section) {
@@ -46,13 +46,16 @@ function noteTextEventInput(section) {
     });
 }
 
-// function focusLostInput(section) {
-//     const noteTextInfoEL = section.querySelector('#note-text__info');
-//     const divTextInfo = section.querySelector('.note-text__readonly');
+function focusLostInput(section) {
+    // const noteTextInfoEL = section.querySelector('#note-text__info');
+    // const divTextInfo = section.querySelector('.note-text__readonly');
+    // const toolkit = section.querySelector('.note-toolkit');
+    // const note = section.querySelector('.note-container');
 
-//     noteTextInfoEL.addEventListener('focusout', () => {
-//         divTextInfo.innerHTML = noteTextInfoEL.value;
-//         divTextInfo.classList.remove('hidden');
-//         noteTextInfoEL.classList.add('hidden');
-//     });
-// }
+    // note.addEventListener('focusin', (e) => {
+    //     console.log('focus', e);
+    // });
+    // noteTextInfoEL.addEventListener('blur', (e) => {
+    //     console.log('blur', e);
+    // });
+}
